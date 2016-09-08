@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html ng-app="hub">
+	<head>
+		<title>Articles Hub</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!-- Custom styles for this template -->
+    	<link href="Css/my_styles.css" rel="stylesheet">
+	</head>
+	<body ng-controller="articlesController">
+		<!-- Navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<!-- For responsive toggle -->
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			            <span class="sr-only">Toggle navigation</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			        </button>
+					<a class="navbar-brand">ArticlesHub</a>
+				</div>	
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>	
+					</ul>	
+					<ul class="nav navbar-nav navbar-right">	
+						<li class="auth"><a href="#">SignUp</a></li>
+						<li><a href="#">SignIn</a></li>
+						<li class="hide"><a href="#">SignOut</a></li>
+					</ul>
+				</div>
+			</div><!--/.nav-collapse -->
+		</nav>
+
+		<!-- Main articles block -->
+
+		<div class="container main-content">
+			<div class="main-articles row">
+				<div class="col-md-9">
+					<h2 class="main-title">Categories</h2>
+					<ul class="nav nav-tabs" ng-repeat="category in categories">
+						<li><a data-toggle="tab" href="#1">{{ category.name }}</a></li>
+						<!-- <li><a data-toggle="tab" href="#2">Category2</a></li>
+						<li><a data-toggle="tab" href="#3">Category3</a></li>
+						<li><a data-toggle="tab" href="#4">Category4</a></li>
+						<li><a data-toggle="tab" href="#5">Category5</a></li>
+						<li><a data-toggle="tab" href="#6">Category6</a></li> -->
+					</ul>
+					<div class="tab-content">
+						<div id="1" class="tab-pane fade in active" >
+							<div class="row">
+								<div class="col-md-3">
+									<div class="col-md-9">
+										<p class="col-md-3 article">
+											Article1
+										</p>
+										<p class="col-md-3 article">
+											Article1
+										</p>
+										<p class="col-md-3 article">
+											Article1
+										</p>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="col-md-9">
+										<p class="col-md-3 article">
+											Article1
+										</p>
+										<p class="col-md-3 article">
+											Article1
+										</p>
+										<p class="col-md-3 article">
+											Article1
+										</p>
+									</div>
+								</div>	
+								<div class="col-md-3">
+									<div class="col-md-9">
+										<p class="col-md-3 article">
+											Article1
+										</p>
+										<p class="col-md-3 article">
+											Article1
+										</p>
+										<p class="col-md-3 article">
+											Article1
+										</p>
+									</div>
+								</div>		
+							</div>	
+						</div>	
+					</div>
+				</div>	
+				<div class="col-md-3">	
+					<div class="top-stories">
+						<h3 class="top-articles">Top Articles</h3>
+						___________________
+
+						<ul class="stories-list">
+							<li>Article 1 </li>
+							<li>Article 1</li>
+							<li>Article 1</li>
+							<li>Article 1 </li>
+							<li>Article 1</li>
+							<li>Article 1</li>
+							<li>Article 1 </li>
+							<li>Article 1</li>
+							<li>Article 1</li>
+						</ul>	
+					</div>
+				</div>	
+			</div>	
+		</div>	
+
+		<!-- Footer -->	
+		<footer class="footer">
+			<div class="container">
+				<p class="text-muted ">All rights are reserved..... </p>
+			</div>	
+		</footer>	
+	</body>
+</html>
